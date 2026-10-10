@@ -1,32 +1,8 @@
-# ======================================================================
-# Big Bazaar - Customer Segmentation using Machine Learning
-# UCS321 MST Mini Project (Problem 3)
-# ----------------------------------------------------------------------
-# IDEA:
-#   Big Bazaar has many customers. We want to put customers who behave
-#   in a similar way into the same GROUP (called a "cluster"), so that
-#   each group can get its own offers.
-#   We do NOT tell the computer the groups. It finds them on its own.
-#   This is called "unsupervised learning" (clustering).
-#
-# STEPS:
-#   1. Load the data
-#   2. Clean the data
-#   3. Make the features we need and scale them
-#   4. Look at the data with charts (EDA)
-#   5. Decide how many groups (k) to make
-#   6. Run the clustering models and compare them
-#   7. Check that the groups are stable
-#   8. Describe each group and give a marketing idea
-#
-# DATA: marketing_campaign.csv (Kaggle: Customer Personality Analysis)
-#       Keep this file in the same folder as this python file.
-# ======================================================================
 
 import numpy as np
 import pandas as pd
 import matplotlib
-matplotlib.use("Agg")              # save the charts as picture files
+matplotlib.use("Agg")             
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -46,8 +22,8 @@ pd.set_option("display.max_columns", 30)
 # colours used in all charts
 COLORS = ["#13315C", "#1B998B", "#C8963E", "#B5465A", "#6C7A89", "#7B5EA7"]
 
-K = 3             # number of groups we will make (reason is explained in step 5)
-YEAR = 2014       # the year the data was collected (used to find age)
+K = 3             
+YEAR = 2014       
 
 
 # ----------------------------------------------------------------------
